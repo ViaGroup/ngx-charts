@@ -32,7 +32,7 @@ import {
         (mouseenter)="showTooltip(i)"
         (mouseleave)="hideTooltip(i)"
       />
-      <xhtml:ng-template #tooltipTemplate>
+      <xhtml:template #tooltipTemplate>
         <xhtml:div class="area-tooltip-container">
           <xhtml:div
             *ngFor="let tooltipItem of tooltipArea.values"
@@ -44,7 +44,7 @@ import {
             {{getToolTipText(tooltipItem)}}
           </xhtml:div>
         </xhtml:div>
-      </xhtml:ng-template>
+      </xhtml:template>
       <svg:rect
         [@animationState]="anchorOpacity[i] !== 0 ? 'active' : 'inactive'"
         class="tooltip-anchor"
